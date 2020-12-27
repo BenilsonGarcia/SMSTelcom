@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SMSTelcom</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/logo_sms.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+   <style type="text/css">
+    /* Styles for wrapping the search box */
+
+.main {
+    width: 30%;
+    margin: 30px auto;
+    margin-top: -5.6%;
+    margin-right: 9%;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+.avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1rem;
+  color:#fff;
+  background-color: #ccc;
+}
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+.circulo-pequeno {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color:red;
+  margin-left: 77%;
+  margin-top: -30%;
+  
+}
+  </style>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead"><i class="fas fa-align-left"></i></a><a href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base"><img src="img/logo_sms.png" style="width: 120px;height: 120px;"></a>
+        <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+          <li class="nav-item">
+            <form id="searchForm" class="ml-auto d-none d-lg-block">
+
+            </form>
+          </li>
+          <li class="nav-item dropdown mr-3"><a id="notifications" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle text-gray-400 px-1"><i class="fa fa-bell"></i><span class="notification-icon"></span></a>
+            <div aria-labelledby="notifications" class="dropdown-menu"><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-warning text-white"><i class="fas fa-envelope"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">Tens 6 pedidos de activação</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item"> 
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-warning text-white"><i class="fas fa-envelope"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">Pedido de comunicação</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-warning text-white"><i class="fas fa-envelope"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">Duas campanhas efectuadas</p>
+                  </div>
+                </div></a><a href="#" class="dropdown-item">
+                <div class="d-flex align-items-center">
+                  <div class="icon icon-sm bg-warning text-white"><i class="fas fa-envelope"></i></div>
+                  <div class="text ml-2">
+                    <p class="mb-0">tem 2 pedidos de activação</p>
+                  </div>
+                </div></a>
+              <div class="dropdown-divider"></div><a href="#" class="dropdown-item text-center"><small class="font-weight-bold headings-font-family text-uppercase">Ver todas notificações</small></a>
+            </div>
+          </li>
+          <li class="nav-item dropdown ml-auto"><a id="userInfo" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><img src="img/avatar10.png" alt="Jason Doe" style="max-width: 2.5rem;" class="img-fluid rounded-circle shadow"></a>
+            <div aria-labelledby="userInfo" class="dropdown-menu"><a href="#" class="dropdown-item"><strong class="d-block text-uppercase headings-font-family">Benilson Garcia</strong><small>Administrador</small></a>
+  
+              <div class="dropdown-divider"></div><a href="login.html" class="dropdown-item">Terminar Secção</a>
+            </div>
+          </li>
+        </ul>  
+      </nav>   
+    </header>  
+    <div class="d-flex align-items-stretch">
+         <div id="sidebar" class="sidebar py-3 bg-dark">
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">Menu</div>
+        <ul class="sidebar-menu list-unstyled">
+              <li class="sidebar-list-item"><a href="home.html" class="sidebar-link text-muted "><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
+              <li class="sidebar-list-item"><a href="contactos.html" class="sidebar-link text-muted"><i class="far fa-address-book mr-3 text-gray"></i><span>Contactos</span></a></li>
+              <li class="sidebar-list-item"><a href="utilizador.html" class="sidebar-link text-muted "><i class="fas fa-user-cog mr-3 text-gray"></i><span>Funcionario</span></a></li>
+              <li class="sidebar-list-item"><a href="mensagem.html" class="sidebar-link text-muted"><i class="far fa-envelope mr-3 text-gray"></i><span>Mensagem</span></a></li>
+               <li class="sidebar-list-item"><a href="campanha.html" class="sidebar-link text-muted"><i class="fas fa-history mr-3 text-gray"></i><span>Campanha</span></a></li>
+              
+         
+        </ul>
+        <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">Opções</div>
+        <ul class="sidebar-menu list-unstyled">
+              <li class="sidebar-list-item"><a href="historico.html" class="sidebar-link text-muted"><i class="fas fa-archive mr-3 text-gray"></i><span>Historico</span></a></li>
+              <li class="sidebar-list-item"><a href="gestao.html" class="sidebar-link text-muted active"><i class="o-imac-screen-1 mr-3 text-gray"></i><span>Gestão</span></a></li>
+             
+              
+        </ul>
+      </div>
+    
+    
+      <div class="page-holder w-100 d-flex flex-wrap">
+      <div class="container-fluid px-xl-5">
+<br>
+<br>
+   <nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Activação de Entidades</a>
+    <a class="nav-link" id="nav-conta-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Ativação de Contas</a>
+    <a class="nav-link" id="nav-perfil-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Perfis de Acesso</a>
+    <a class="nav-link" id="nav-entidade-tab" data-toggle="tab" href="#nav-entidade" role="tab" aria-controls="nav-contact" aria-selected="false">Adicionar Entidades</a>
+  </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+    <br>
+  <div class="card">
+  <div class="card-header">
+   <div class="container-fluid">
+      <br>
+      <h5> pedido de Ativação de Entidades</h5>
+    </div>
+   
+  </div>     
+  <div class="card-body table-responsive">
+    
+<table class="table table-borderles">
+  <tbody>
+    <tr>
+      <td> 
+        <div class="avatar" style="background-color: #00FFFF;">
+          <span>V</span>
+       </div>
+     </td>
+      <td>
+        <p>Fazenda Verdana</p>
+        <span>Privada</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning"data-toggle="modal" data-target="#act"><i class="far fa-plus-circle">Ativar</i></button>
+       
+      </td>
+      <td>
+      <div class="dropdown dropright">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detalhes </span>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" data-toggle="modal" data-target="#informacao" href="#">Informações</a>
+    <a class="dropdown-item text-danger" data-toggle="modal" data-target="#deletar" href="#" >Eliminar</a>
+  </div>
+</div>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <div class="avatar"  style="background-color: #00FFFF;">
+          <span>P</span>
+          
+       </div>
+     </td>
+      <td>
+        <p>Hotel Praia</p>
+        <span>Privada</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#act"><i class="far fa-plus-circle">Ativar</i></button>
+
+      </td>
+
+            <td>
+        <div class="dropdown dropright">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detalhes </span>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" data-toggle="modal" data-target="#informacao" href="#">Informações</a>
+    <a class="dropdown-item text-danger" data-toggle="modal" data-target="#deletar" href="#" >Eliminar</a>
+  </div>
+</div>
+      </td>
+    </tr>
+        <tr>
+      <td> 
+        <div class="avatar">
+          <span>R</span>
+       </div>
+     </td>
+      <td>
+        <p>Restaurante Reis</p>
+        <span>Privada</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#act" ><i class="far fa-plus-circle">Ativar</i></button>
+
+      </td>
+            <td>
+        <div class="dropdown dropright">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detalhes </span>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" data-toggle="modal" data-target="#informacao" href="#">Informações</a>
+    <a class="dropdown-item text-danger" data-toggle="modal" data-target="#deletar" href="#" >Eliminar</a>
+  </div>
+</div>
+      </td>
+    </tr>
+        <tr>
+      <td> 
+        <div class="avatar"  style="background-color: #00FFFF;">
+          <span>L</span>
+       </div>
+     </td>
+      <td>
+        <p>Hospital Lucrencia Paim</p>
+        <span>Modulo Contactos</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#act"><i class="far fa-plus-circle">Ativar</i></button>
+
+      </td>
+            <td>
+        <div class="dropdown dropright">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detalhes </span>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" data-toggle="modal" data-target="#informacao" href="#">Informações</a>
+    <a class="dropdown-item text-danger" data-toggle="modal" data-target="#deletar" href="#" >Eliminar</a>
+  </div>
+</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
+  </div>
+</div>
+  
+
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-conta-tab">
+    
+    <br>
+  <div class="card">
+  <div class="card-header">
+   <div class="container-fluid">
+      <br>
+      <h4>Ativação de Conta</h4>
+    </div>
+   
+  </div>     
+  <div class="card-body table-responsive">
+    
+<table class="table table-borderles">
+  <tbody>
+    <tr>
+      <td> 
+        <div class="avatar" style="background-color: #00FFFF;">
+          <span>B</span>
+
+        <div class="circulo-pequeno" style="background-color: #2EFE2E;"></div>
+       </div>
+     </td>
+      <td>
+        <p>Benilson Garcia</p>
+        <span>Administrador</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning"><i class="far fa-plus-circle">Ativar</i></button>
+        <button class="btn btn-outline-danger" data-toggle="modal" data-target="#ativador"><i class="far fa-plus-circle" data-toggle="modal" data-target="#ativador">Desactivar</i></button>
+
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <div class="avatar">
+          <span>J</span>
+          <div class="circulo-pequeno"></div>
+       </div>
+     </td>
+      <td>
+        <p>Juclenio Antoni</p>
+        <span>Modulo Mensagem</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning"><i class="far fa-plus-circle">Ativar</i></button>
+        <button class="btn btn-outline-danger" data-toggle="modal" data-target="#ativador"><i class="far fa-plus-circle">Desactivar</i></button>
+
+      </td>
+    </tr>
+        <tr>
+      <td> 
+        <div class="avatar">
+          <span>O</span>
+          <div class="circulo-pequeno" style="background-color: #2EFE2E;"></div>
+       </div>
+     </td>
+      <td>
+        <p>Oliveira Ngola</p>
+        <span>Modulo Campnha</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning" ><i class="far fa-plus-circle">Ativar</i></button>
+        <button class="btn btn-outline-danger" data-toggle="modal" data-target="#ativador"><i class="far fa-plus-circle">Desactivar</i></button>
+
+      </td>
+    </tr>
+        <tr>
+      <td> 
+        <div class="avatar">
+          <span>M</span>
+          <div class="circulo-pequeno" style="background-color: #2EFE2E;"></div>
+       </div>
+     </td>
+      <td>
+        <p>Mario Azulay</p>
+        <span>Modulo Contactos</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning"><i class="far fa-plus-circle">Ativar</i></button>
+        <button class="btn btn-outline-danger"><i class="far fa-plus-circle">Desactivar</i></button>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
+  </div>
+</div>
+  
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-perfil-tab">
+    
+    <br>
+  <div class="card">
+  <div class="card-header">
+   <div class="container-fluid">
+      <br>
+      <h4>Restrições de Usuários</h4>
+    </div>
+   
+  </div>     
+  <div class="card-body table-responsive">
+    
+<table class="table table-borderles">
+  <tbody>
+    <tr>
+      <td> 
+        <div class="avatar" style="background-color: #00FFFF;">
+          <span>B</span>
+       </div>
+     </td>
+      <td>
+        <p>Benilson Garcia</p>
+        <span>Administrador</span>
+      </td>
+      <td>
+        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#acesso"><i class="far fa-plus-circle">Add</i></button>
+
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <div class="avatar">
+          <span>B</span>
+       </div>
+     </td>
+      <td>
+        <p>Juclenio Antonio</p>
+        <span>Modulo Mensagem</span>
+      </td>
+      <td>
+        <div class="dropdown dropright">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detalhes </span>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editar-acesso">Editar</a>
+    <a class="dropdown-item text-danger" data-toggle="modal" data-target="#deletar" href="#" >Eliminar</a>
+  </div>
+</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
+  </div>
+</div>
+  
+  </div>
+
+    <div class="tab-pane fade" id="nav-entidade" role="tabpanel" aria-labelledby="nav-entidade-tab">
+    
+    <br>
+  <div class="card">
+  <div class="card-header">
+   <div class="container-fluid">
+      <br>
+      <h4>Entidades</h4>
+    </div>
+     <button class="btn btn-outline-warning" data-toggle="modal" data-target="#entidade" style="margin-left: 90%;margin-top:-5.1%;"><i class="far fa-plus-circle">Add</i></button>
+   
+  </div>    
+  <div class="card-body table-responsive">
+    
+<table class="table table-borderles">
+  <tbody>
+    <tr>
+      <td> 
+        <div class="avatar" style="background-color: #00FFFF;">
+          <span>M</span>
+       </div>
+     </td>
+      <td>
+        <p>MSTELCOM</p>
+        <span>Entidade Pública</span>
+      </td>
+      <td>
+        <div class="dropdown dropright">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detalhes </span>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" data-toggle="modal" data-target="#editar" href="#">Editar</a>
+    <a class="dropdown-item" data-toggle="modal" data-target="#informacao" href="#">Informações</a>
+    <a class="dropdown-item text-danger" data-toggle="modal" data-target="#deletar" href="#" >Eliminar</a>
+  </div>
+</div>
+      </td>
+    </tr>
+    <tr>
+      <td> 
+        <div class="avatar" style="background-color: #4B0082;">
+          <span>F</span>
+       </div>
+     </td>
+      <td>
+        <p>Fazenda Castelo</p>
+        <span>Entidade Privada</span>
+      </td>
+      <td>
+        <div class="dropdown dropright">
+            <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Detalhes </span>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" data-toggle="modal" data-target="#editar" href="#">Editar</a>
+    <a class="dropdown-item" data-toggle="modal" data-target="#informacao" href="#">Informações</a>
+    <a class="dropdown-item text-danger" data-toggle="modal" data-target="#deletar" href="#" >Eliminar</a>
+  </div>
+</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
+  </div>
+</div>
+  
+  </div>
+</div>
+
+  <!-- Modal para informações da entidade-->
+
+                  <div class="card-body">
+                <div id="informacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 id="exampleModalLabel" class="modal-title">informações da Entidade</h4>
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                          </div>
+                          <div class="modal-body">
+                              <table class="table">
+                            <tbody>
+                              <br>
+                              <tr>
+                                <th scope="col">Nome Da Entidade:</th>
+                                <td>Mstelcom</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Email:</th>
+                                <td>Mstelcom@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Endereço:</th>
+                                <td>Mutamba,Rua 12 serpapinto</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Nif:</th>
+                                <td>00988746474LA</td>
+                              </tr>
+                              <tr>
+                                <th scope="col">Tipo de Entidade:</th>
+                                <td>Pública</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                   <!-- Modal Criar entidades-->
+                                    <div class="card-body">
+  
+                    <div id="entidade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 id="exampleModalLabel" class="modal-title">Nova entidade</h4>
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <p style="color:#ddd;">Adicione os dados da Entidade</p>
+                           <form id="formulario">
+                      <div class="form-group">
+                        <label class="form-control-label text-uppercase">Entidade</label>
+                        <input type="text" id="Nome" placeholder="Nome" class="form-control">
+                      </div>
+                      <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Email</label>
+                        <input type="Email" id="Email" placeholder="Email" class="form-control">
+                      </div>
+                   <div class="form-group">
+                  <label class="form-control-label text-uppercase">Endereço</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option value="">Luanda</option>
+                    <option value="Luanda, Golf 2">Benguela</option>
+                    <option value="Luanda, Golf 2">Huambo</option>
+                    <option value="Luanda, Golf 2">Moxico</option>
+                    <option value="Luanda, Golf 2">Malange</option>
+                    <option value="Luanda, Golf 2">Cabinda</option>
+                  </select>
+                </div>
+                <div class="form-group">       
+                        <label class="form-control-label text-uppercase">NIF</label>
+                        <input type="text" id="Nif" placeholder="Numero de Nif" class="form-control">
+                 </div>
+                  <!--
+                  <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Saldo</label>
+                        <input type="text" id="Saldo" class="form-control">
+                 </div>
+                  < -->
+                <div class="form-group">
+                  <label class="form-control-label text-uppercase">Tipo de Entidade</label>
+                  <select class="form-control form-control-lg" id="TipoEntidade">
+                    <option value="1">Pública</option>
+                    <option value="2">Privada</option>
+                    <option value="3">Particular</option>
+                    <option value="4">Coletiva</option>
+                  </select>
+                </div>
+                <!--
+                 <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Criador</label>
+                        <input type="text" id="Criador" placeholder="Assinatura" class="form-control">
+                 </div>
+                 -->
+                 <!--
+                 <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Data de Criacao</label>
+                        <input type="date" id="data" placeholder="dd/mm/ano" class="form-control">
+                 </div>
+                 -->
+                 <!--
+                  <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Admin</label>
+                        <input type="text" id="Admin" placeholder="Assinatura" class="form-control">
+                 </div>
+               -->
+                    </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-danger">Cancelar</button>
+                            <button type="button" class="btn btn-outline-warning">Criar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   <!-- Modal Editar entidades-->
+                    <div class="card-body">
+  
+                    <div id="editar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 id="exampleModalLabel" class="modal-title">Editar entidade</h4>
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <p style="color:#ddd;">Editar os dados da Entidade</p>
+                           <form id="formulario">
+                      <div class="form-group">
+                        <label class="form-control-label text-uppercase">Entidade</label>
+                        <input type="text" id="Nome" placeholder="Nome" class="form-control">
+                      </div>
+                      <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Email</label>
+                        <input type="Email" id="Email" placeholder="Email" class="form-control">
+                      </div>
+                   <div class="form-group">
+                  <label class="form-control-label text-uppercase">Endereço</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option value="">Luanda</option>
+                    <option value="Luanda, Golf 2">Benguela</option>
+                    <option value="Luanda, Golf 2">Huambo</option>
+                    <option value="Luanda, Golf 2">Moxico</option>
+                    <option value="Luanda, Golf 2">Malange</option>
+                    <option value="Luanda, Golf 2">Cabinda</option>
+                  </select>
+                </div>
+                <div class="form-group">       
+                        <label class="form-control-label text-uppercase">NIF</label>
+                        <input type="text" id="Nif" placeholder="Numero de Nif" class="form-control">
+                 </div>
+                  <!--
+                  <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Saldo</label>
+                        <input type="text" id="Saldo" class="form-control">
+                 </div>
+                  < -->
+                <div class="form-group">
+                  <label class="form-control-label text-uppercase">Tipo de Entidade</label>
+                  <select class="form-control form-control-lg" id="TipoEntidade">
+                    <option value="1">Pública</option>
+                    <option value="2">Privada</option>
+                    <option value="3">Particular</option>
+                    <option value="4">Coletiva</option>
+                  </select>
+                </div>
+                <!--
+                 <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Criador</label>
+                        <input type="text" id="Criador" placeholder="Assinatura" class="form-control">
+                 </div>
+                 -->
+                 <!--
+                 <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Data de Criacao</label>
+                        <input type="date" id="data" placeholder="dd/mm/ano" class="form-control">
+                 </div>
+                 -->
+                 <!--
+                  <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Admin</label>
+                        <input type="text" id="Admin" placeholder="Assinatura" class="form-control">
+                 </div>
+               -->
+                    </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-danger">Cancelar</button>
+                            <button type="button" class="btn btn-outline-warning">Editar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!-- Modal para Adicionar restrições de acesso-->
+                    <div class="card-body">
+  
+                    <div id="acesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 id="exampleModalLabel" class="modal-title">Restrições de Acesso</h4>
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <p style="color:#ddd;">Adicione os dados da Entidade</p>
+                           <form id="formulario">
+                   <div class="form-group">
+                  <label class="form-control-label text-uppercase">Utilizadores</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option>Benilson Garcia</option>
+                    <option>Juclenio Antonio</option>
+                    <option>Oliveira Ngola</option>
+                    <option>Mario Azulay</option>
+                    <option>Jay Trindade</option>
+                    <option>João Ricardo</option>
+                  </select>
+                </div>
+                 <div class="form-group">
+                  <label class="form-control-label text-uppercase">Mudulo de Acesso</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option>Administrador</option>
+                    <option>Modulo Mensagem</option>
+                    <option>Modulo Campanha</option>
+                    <option>Modulo Contacto</option>
+                    <option>Modulo Funcionario</option>
+                  </select>
+                </div>
+                 
+                    </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-danger">Cancelar</button>
+                            <button type="button" class="btn btn-outline-warning">Criar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+               <!-- Modal para editar restrições de acesso-->
+                    <div class="card-body">
+  
+                    <div id="editar-acesso" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 id="exampleModalLabel" class="modal-title"> Editar Restrições de Acesso</h4>
+                            <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                          </div>
+                          <div class="modal-body">
+                            <p style="color:#ddd;">Adicione os dados da Entidade</p>
+                           <form id="formulario">
+                   <div class="form-group">
+                  <label class="form-control-label text-uppercase">Utilizadores</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option>Benilson Garcia</option>
+                    <option>Juclenio Antonio</option>
+                    <option>Oliveira Ngola</option>
+                    <option>Mario Azulay</option>
+                    <option>Jay Trindade</option>
+                    <option>João Ricardo</option>
+                  </select>
+                </div>
+                 <div class="form-group">
+                  <label class="form-control-label text-uppercase">Mudulo de Acesso</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option>Administrador</option>
+                    <option>Modulo Mensagem</option>
+                    <option>Modulo Campanha</option>
+                    <option>Modulo Contacto</option>
+                    <option>Modulo Funcionario</option>
+                  </select>
+                </div>
+                 
+                    </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-danger">Cancelar</button>
+                            <button type="button" class="btn btn-outline-warning">Criar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                                      <!-- modal para activar pedido de entidade-->
+                    <div class="card-body">
+                    <div id="act" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content" style="margin-top: 18%;">
+                         
+                          <div class="modal-body">
+              <div class="avatar" style="margin-left:40%;">
+                   <span><img src="img/sucess.png" style="width: 65px;height: 65px;"></span>
+
+                 </div>
+                 <br>
+                                 <p class="text-center">Entidade activada com sucesso!</p>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-danger">Cancelar</button>
+                            <button type="button" class="btn btn-outline-warning">Confirmar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   
+
+                           <!-- Modal deletar-->
+ 
+
+                  <div class="card-body">
+                    <div id="deletar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content" style="margin-top: 18%;">
+                         
+                          <div class="modal-body">
+                                   <div class="avatar bg-danger" style="margin-left:40%;">
+                                     <span><i class="fas fa-trash"></i></span>
+
+                                   </div>
+                                   <p class="text-center">Tem certeza de que pretende deletar este item</p>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-dark">Cancelar</button>
+                            <button type="button" class="btn btn-outline-warning">Deletar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+        
+                           <!-- Modal desativar conta-->
+ 
+
+                  <div class="card-body">
+                    <div id="ativador" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+                      <div role="document" class="modal-dialog">
+                        <div class="modal-content" style="margin-top: 18%;">
+                         
+                          <div class="modal-body">
+                                   <div class="avatar bg-danger" style="margin-left:45%;">
+                                     <span><i class="far fa-stop-circle"></i></span>
+
+                                   </div>
+                                   <p class="text-center">Se desativar a conta poderá perder privilegio de acesso aos modulos</p>
+                          <div class="modal-footer">
+                            <button type="button" data-dismiss="modal" class="btn btn-outline-dark">Cancelar</button>
+                            <button type="button" class="btn btn-outline-warning">Desativar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SMSTelcom</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/logo_sms.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+        <style type="text/css">
+      .tela-splash{
+      width: 100%;
+      height: 765px;
+      background-image: url('img/imagem.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      overflow-x: hidden;
+      }
+      .fundo-escuro{
+      width: 100%;
+      padding-top: 2%;
+      text-align: center;
+      background-color: rgba(0,0,0,0.8);
+
+      }
+  .conteudo .texto{
+    margin-bottom: 2%;
+    color:#eee;
+  }
+   .conteudo .texto .logo-tela{
+      width: 13%;
+   }
+  .conteudo .texto h2{
+    font-size: 2.5rem;
+  }
+  .conteudo .card{
+    text-align: left;
+  }
+
+  @media (max-width: 992px) {
+ 
+  .conteudo .texto h2{
+    font-size: 1.5rem;
+  }
+  }
+        </style>
+      
+  </head>
+  <body>
+  
+
+    <div class="tela-splash">
+        <div class="fundo-escuro">
+         <div class="row">
+            <div class="container conteudo">
+               <div class="texto">
+                  <img src="img/logo_sms.png" class="logo-tela">
+                <h2>Registo de Entidade</h2>
+                </div>
+        <div class="container col-sm-12 col-md-6">
+           <!-- Basic Form-->
+           <div class="card">
+              <div class="container">
+               <div class="card-body">
+                
+                    <form id="formulario">
+                      <div class="form-group">
+                        <h3>É novo Aqui?</h3>
+                    <span style="color:#ddd;">Isto levara apenas alguns segundos,Informe seus dados.</span><br><br>
+                        <label class="form-control-label">Entidade</label>
+                        <input type="text" id="Nome" placeholder="Nome da Entidade" class="form-control">
+                      </div>
+                      <div class="form-group">       
+                        <label class="form-control-label">Email</label>
+                        <input type="Email" id="Email" placeholder="Email" class="form-control">
+                      </div>
+                   <div class="form-group">
+                  <label class="form-control-label">Endereço</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option value="">Luanda</option>
+                    <option value="Luanda, Golf 2">Benguela</option>
+                    <option value="Luanda, Golf 2">Huambo</option>
+                    <option value="Luanda, Golf 2">Moxico</option>
+                    <option value="Luanda, Golf 2">Malange</option>
+                    <option value="Luanda, Golf 2">Cabinda</option>
+                  </select>
+                </div>
+                <div class="form-group">       
+                        <label class="form-control-label">NIF</label>
+                        <input type="text" id="Nif" placeholder="Numero de Nif" class="form-control">
+                 </div>
+              
+                <div class="form-group">
+                  <label class="form-control-label">Tipo de Entidade</label>
+                  <select class="form-control form-control-lg" id="TipoEntidade">
+                    <option value="1">Pública</option>
+                    <option value="2">Privada</option>
+                    <option value="3">Particular</option>
+                    <option value="4">Coletiva</option>
+                  </select>
+                </div>
+               
+                      <div class="form-group">            
+                       <a href="index.html" class="btn btn-outline-danger">Cancelar</a>
+                        <a id="Entrar" href="pedido.html" type="submit" class="btn btn-warning">Enviar</a>
+                      </div>
+                    </form>
+                  <div class="spinner-border text-warning" id="rolling1" style="display: none" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                  </div>
+                  </div>
+              </div>
+              <!-- Horizontal Form-->
+        </div>
+      </div>
+
+                </div>
+              </div>
+
+            </div>
+         </div> 
+        </div>
+
+   
+    </script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+  
+  </body>
+</html>

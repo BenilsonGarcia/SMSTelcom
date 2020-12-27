@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SMSTelcom</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow"> 
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/logo_sms.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- navbar-->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow"><a href="index.html" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead"></a><a href="index.html" class="navbar-brand font-weight-bold text-uppercase text-base"><img src="img/logo_sms.png" style="width: 100px;height: 100px;margin-top: -8px;"></a>
+        <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+          <li class="nav-item">
+            <form id="searchForm" class="ml-auto d-none d-lg-block">
+              <div class="form-group position-relative mb-0">
+               <a href="login.html" class="btn btn-primary btn-danger">Login</a>
+              </div>
+            </form>
+          </li>
+
+        </ul>  
+      </nav>  
+    </header>  
+
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+
+
+           <!-- Basic Form-->
+              <div class="col-lg-6 mb-5" style="top: 5%;margin-left: 25%;">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="h6 text-uppercase mb-0">Cadastrar</h3>
+                  </div>
+                  <div class="card-body">
+                    <h3>É novo Aqui?</h3>
+                    <p>Isto levara apenas alguns segundos,Informe seus dados.</p>
+                    <form id="formulario">
+                      <div class="form-group">
+                        <label class="form-control-label text-uppercase">Usuario</label>
+                        <input type="text" id="Nome" placeholder="Nome Completo" class="form-control">
+                      </div>
+                      <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Email</label>
+                        <input type="Email" id="Email" placeholder="Email" class="form-control">
+                      </div>
+                   <div class="form-group">
+                  <label class="form-control-label text-uppercase">Endereço</label>
+                  <select  class="form-control form-control-lg" id="Endereco">
+                    <option value="">Luanda</option>
+                    <option value="Luanda, Golf 2">Benguela</option>
+                    <option value="Luanda, Golf 2">Huambo</option>
+                    <option value="Luanda, Golf 2">Moxico</option>
+                    <option value="Luanda, Golf 2">Malange</option>
+                    <option value="Luanda, Golf 2">Cabinda</option>
+                  </select>
+                </div>
+                <div class="form-group">       
+                        <label class="form-control-label text-uppercase">NIF</label>
+                        <input type="text" id="Nif" placeholder="Numero de Nif" class="form-control">
+                 </div>
+                  <!--
+                  <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Saldo</label>
+                        <input type="text" id="Saldo" class="form-control">
+                 </div>
+                  < -->
+                <div class="form-group">
+                  <label class="form-control-label text-uppercase">Tipo de Entidade</label>
+                  <select class="form-control form-control-lg" id="TipoEntidade">
+                    <option value="1">Pública</option>
+                    <option value="2">Privada</option>
+                    <option value="3">Particular</option>
+                    <option value="4">Coletiva</option>
+                  </select>
+                </div>
+                <!--
+                 <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Criador</label>
+                        <input type="text" id="Criador" placeholder="Assinatura" class="form-control">
+                 </div>
+                 -->
+                 <!--
+                 <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Data de Criacao</label>
+                        <input type="date" id="data" placeholder="dd/mm/ano" class="form-control">
+                 </div>
+                 -->
+                 <!--
+                  <div class="form-group">       
+                        <label class="form-control-label text-uppercase">Admin</label>
+                        <input type="text" id="Admin" placeholder="Assinatura" class="form-control">
+                 </div>
+               -->
+                      <div class="form-group" style="margin-left: 55%;margin-top: 5px;"> 
+                      <a href="index.html" class="btn btn-outline-danger btn-block">Cancelar</a>
+                        <button id="Entrar" type="submit" class="btn btn-warning">Enviar</button>
+                      </div>
+                    </form>
+                  
+                  <div class="spinner-border text-warning" id="rolling1" style="display: none" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                  </div>
+                  </div>
+
+
+                  </div>
+                </div>
+              </div>
+              <!-- Horizontal Form-->
+
+
+
+            </div>
+        </div>
+      </div>
+    </div>
+ 
+
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    
+     <!-- JavaScript cadastro api creat-->
+
+     <script type="text/javascript">
+      
+         var $dados = { "Nome": $('#Nome').val(), "Endereco": $('#Endereco').val(), "Nif": $('#Nif').val(), "Email": $('#Email').val(), "TipoEntidade": $('#TipoEntidade').val()};
+
+      $('#formulario').submit(function(){
+
+ console.log('Funcionando');
+var settings = {
+  "url": "http://10.255.1.111/api/entidade-create/",
+  "method": "POST",
+  "timeout": 1000,
+  "headers": {
+    "Authorization": " Token b97f3d07e4a9bdc3c7e3f9bb1fd9036699a36f25",
+    "Content-Type": "application/json"
+  },
+  "complete": function(){
+    console.log('Espera sua response');
+  },
+  //"data": JSON.stringify($dados)
+  "data": JSON.stringify({"Nome":"ABC Lda","Endereco":"Cacuaco,Vila de Cacuaco 1678","Nif":"005453410RA50","Email":"abc@acs.ao","TipoEntidade":1})
+
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+        return false;
+        });
+     </script>
+<!--
+<script>
+  $(document).ready(function(){
+
+       $('#Entrar').click(function(){
+
+        var $dados = { Nome: $('#Nome').val(), Endereco: $('#Endereco').val(), Nif: $('#Nif').val(), Email: $('#Email').val(), TipoEntidade: $('#TipoEntidade').val(), Saldo: $('#Saldo').val(), DataCriacao: $('#data').val(), Admin: $('#Admin').val(), Criador: $('#Criador').val()  };
+
+        var settings = {
+      "url": "http://10.255.1.111/api/entidade-create/",
+      "method": "POST",
+      "timeout": 10000,
+      "beforeSend": function(){
+        $('#rolling').css('display','block');
+      },
+      "headers": {
+      "name": "Create Entidade",
+    "description": "",
+    "renders": [
+        "application/json",
+        "text/html"
+    ],
+    "parses": [
+        "application/json",
+        "application/x-www-form-urlencoded",
+        "multipart/form-data"
+    ]
+      },
+      "data": JSON.stringify($dados),
+    };
+
+      $.ajax(settings).done(function (response) {
+      $(location).attr('href','index.html');
+      console.log(response);
+
+});
+           return false;      
+        })
+     
+      });
+</script> -->
+
+
+
+  </body>
+</html>
